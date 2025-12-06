@@ -1,0 +1,92 @@
+/* Загальні стилі */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+html,body,#main { height: 100%; }
+
+#main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 12px;
+  background: linear-gradient(90deg,#3a6fb0,#2b9aa3);
+  color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+header button {
+  background: rgba(255,255,255,0.12);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.18);
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+header button:hover { background: rgba(255,255,255,0.18); }
+
+.main-area {
+  height: 500px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+}
+
+.leftPanel, .content, .rightPanel {
+  width: 33%;
+  padding: 12px;
+  border-radius: 6px;
+  overflow: auto;
+}
+
+.leftPanel { background: #f0f8ff; }
+.content   { background: #fffaf0; }
+.rightPanel { background: #f7fff0; }
+
+footer {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: #f1f1f1;
+  border-top: 1px solid #ddd;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  animation: spin 1s linear infinite;
+  margin: 12px auto;
+}
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+.content .title {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+.content .placeholder { text-align:center; padding: 20px; color: #666; }
+
+.users-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+.users-table th, .users-table td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+.users-table th { background: #efefef; cursor: pointer; user-select: none; }
+.users-table tr.highlight { background: #fff7b2; }
+
+.sum-box { font-weight: bold; margin-bottom: 8px; }
+
+.footer-block { padding: 8px; border-radius: 6px; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+
+.leftPanel .search-row { display:flex; gap:6px; align-items:center; margin-top:12px; }
+.leftPanel input[type="text"] { flex:1; padding:6px 8px; border-radius:4px; border:1px solid #ccc; }
+
+.btn-delete { background: #ff6b6b; color:white; border:none; padding:6px 8px; border-radius:4px; cursor:pointer; }
+.btn-delete:hover { opacity:0.9; }
+
+.hidden { display:none !important; }
